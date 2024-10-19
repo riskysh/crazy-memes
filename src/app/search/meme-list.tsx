@@ -11,6 +11,7 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
   
 
 export default function MemeList({ files }: { files: FileObject[] }) {
@@ -21,8 +22,10 @@ export default function MemeList({ files }: { files: FileObject[] }) {
             return (
                 <Card key={file.filePath}>
                 <CardHeader>
-                  <CardTitle>Card Title</CardTitle>
-                  <CardDescription>Card Description</CardDescription>
+                  <CardTitle><div>
+                    {file.customMetadata?.memeContent ?? file.name}
+                    </div></CardTitle> 
+                  <CardDescription></CardDescription>
                 </CardHeader>
                 <CardContent>
                 <IKImage 
@@ -35,7 +38,7 @@ export default function MemeList({ files }: { files: FileObject[] }) {
                 />
                 </CardContent>
                 <CardFooter>
-                  <p>Card Footer</p>
+                  <Button>Like</Button>
                 </CardFooter>
               </Card>
               
