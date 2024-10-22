@@ -5,7 +5,6 @@
 
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -68,7 +67,7 @@ export function UploadMemeBtn() {
                   setIsUploading(false);
                   console.log("error", error);
                 }}
-                onSuccess={(response) => {
+                onSuccess={() => {
                   setIsUploading(false);
                   router.push(`/`);
                 }}

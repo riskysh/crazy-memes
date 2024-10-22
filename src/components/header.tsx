@@ -3,7 +3,7 @@ import { CircleUser, Laugh, Menu, Search } from "lucide-react";
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { Button } from "./ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Input } from "./ui/input";
 import { ModeToggle } from "./mode-toggle";
 import { redirect } from "next/navigation";
@@ -11,8 +11,6 @@ import { auth, signIn, signOut } from "@/auth";
 
 
 export async function Header() {
-
-    const session = await auth()
 
     return (
         <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">

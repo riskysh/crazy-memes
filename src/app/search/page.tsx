@@ -2,7 +2,6 @@
 import { imagekit } from "@/lib/imagekit";
 import { unstable_noStore } from "next/cache";
 import MemeList from "./meme-list";
-import { Button } from "@/components/ui/button";
 import { UploadMemeBtn } from "./upload-meme-btn";
 import { auth } from "@/auth";
 
