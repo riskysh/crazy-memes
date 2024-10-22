@@ -135,10 +135,10 @@ async function FavoritePageAccess() {
   if (session) {
     return (
       <Link
-      href="/favorite"
+      href="/favorites"
       className="text-muted-foreground transition-colors hover:text-foreground"
     >
-      Favorite
+      Favorites
     </Link>
     )
   }

@@ -5,6 +5,7 @@ import {
     text,
     primaryKey,
     integer,
+    uniqueIndex,
   } from "drizzle-orm/pg-core"
   import postgres from "postgres"
   import { drizzle } from "drizzle-orm/postgres-js"
@@ -91,3 +92,26 @@ import {
       }),
     })
   )
+
+  export const favorites = pgTable("favorites", {
+    userId: text("userId")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+    memeId: text("memeId").notNull(), 
+  })
+
+  export const favoriteCounts = pgTable(
+    "favorite_count",
+    {
+      id: text("id")
+        .primaryKey()
+        .$defaultFn(() => crypto.randomUUID()),
+      memeId: text("memeId").notNull(),
+      count: integer("count").notNull().default(0),
+    },
+    (table) => ({
+      memeIdUniqueIndex: uniqueIndex("memeIdUniqueIndex").on(table.memeId),
+    })
+  );
+
+  export type Favorite = typeof favorites.$inferSelect;
