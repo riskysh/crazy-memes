@@ -33,9 +33,9 @@ export default function MemeList({ files }: { files: FileObject[] }) {
                     key={file.fileId}
                     path={file.filePath}
                     alt={file.name}
-                    width={300}
+                    width={320}
                     urlEndpoint={urlEndpoint}
-                    height={300}
+                    height={320}
                 />
                 </CardContent>
                 <CardFooter>

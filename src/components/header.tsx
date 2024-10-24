@@ -20,7 +20,7 @@ export async function Header() {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
           >
             <Laugh className="h-6 w-6" />
-            <span className="sr-only">Doodle</span>
+            <span className="sr-only">Crazy Memes</span>
           </Link>
           <Link
             href="/"
@@ -48,7 +48,7 @@ export async function Header() {
                 className="flex items-center gap-2 text-lg font-semibold"
               >
                 <Laugh className="h-6 w-6" />
-                <span className="sr-only">Doodle</span>
+                <span className="sr-only">Crazy Memes</span>
               </Link>
               <Link
                 href="/"

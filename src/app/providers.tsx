@@ -5,7 +5,7 @@ import { ImageKitProvider } from "imagekitio-next"
 const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 const authenticator = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/auth");
+    const response = await fetch("https://crazy-memes.vercel.app/api/auth");
 
     if (!response.ok) {
       const errorText = await response.text();
