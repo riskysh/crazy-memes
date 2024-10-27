@@ -28,7 +28,7 @@ export function UploadMemeBtn() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Upload Base Meme</Button>
+        <Button>Upload Meme</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

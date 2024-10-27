@@ -28,7 +28,6 @@ export async function Header() {
           >
             Browse
           </Link>
-          <FavoritePageAccess />
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -56,7 +55,6 @@ export async function Header() {
               >
                 Browse
               </Link>
-              <FavoritePageAccess />
             </nav>
           </SheetContent>
         </Sheet>
@@ -126,18 +124,4 @@ async function AccountMenu() {
     </DropdownMenu>
   )
 
-}
-
-async function FavoritePageAccess() {
-  const session = await auth()
-  if (session) {
-    return (
-      <Link
-      href="/favorites"
-      className="text-muted-foreground transition-colors hover:text-foreground"
-    >
-      Favorites
-    </Link>
-    )
-  }
 }
