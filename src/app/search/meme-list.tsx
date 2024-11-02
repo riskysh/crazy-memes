@@ -11,8 +11,6 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Heart } from "lucide-react"
   
 
 export default function MemeList({ files }: { files: FileObject[] }) {
@@ -39,7 +37,6 @@ export default function MemeList({ files }: { files: FileObject[] }) {
                 />
                 </CardContent>
                 <CardFooter>
-                  <Button><Heart />Like</Button>
                 </CardFooter>
               </Card>
               
